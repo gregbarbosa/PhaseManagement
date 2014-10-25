@@ -35,14 +35,15 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadData()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -89,11 +90,11 @@ class TableViewController: UITableViewController {
                 let artistsManagement = dict.objectForKey("Management") as String
                 (segue.destinationViewController as DetailsViewController).artistName = artist
                 (segue.destinationViewController as DetailsViewController).artistBio = artistBio
-                (segue.destinationViewController as DetailsViewController).artistFacebook = artistBio
-                (segue.destinationViewController as DetailsViewController).artistTwitter = artistBio
-                (segue.destinationViewController as DetailsViewController).artistSoundcloud = artistBio
-                (segue.destinationViewController as DetailsViewController).artistsBooking = artistBio
-                (segue.destinationViewController as DetailsViewController).artistsManagement = artistBio
+                (segue.destinationViewController as DetailsViewController).artistFacebook = artistFacebook
+                (segue.destinationViewController as DetailsViewController).artistTwitter = artistTwitter
+                (segue.destinationViewController as DetailsViewController).artistSoundcloud = artistSoundcloud
+                (segue.destinationViewController as DetailsViewController).artistsBooking = artistsBooking
+                (segue.destinationViewController as DetailsViewController).artistsManagement = artistsManagement
             }
         }
     }

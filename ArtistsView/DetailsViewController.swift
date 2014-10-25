@@ -10,8 +10,13 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
-    @IBOutlet weak var artistNameLabel: UILabel!
     @IBOutlet weak var artistBioTextView: UITextView!
+    @IBOutlet weak var artistFacebookLabel: UILabel!
+    @IBOutlet weak var artistTwitterLabel: UILabel!
+    @IBOutlet weak var artistSoundcloudLabel: UILabel!
+    @IBOutlet weak var artistBookingLabel: UILabel!
+    @IBOutlet weak var artistManagementLabel: UILabel!
+    
     var artistName = String()
     var artistBio = String()
     var artistFacebook = String()
@@ -23,8 +28,12 @@ class DetailsViewController: UIViewController {
     
     func configureView() {
         self.title = artistName
-        artistNameLabel.text = artistName
         artistBioTextView.text = artistBio
+        artistFacebookLabel.text = artistFacebook
+        artistTwitterLabel.text = artistTwitter
+        artistSoundcloudLabel.text = artistSoundcloud
+        artistBookingLabel.text = artistsBooking
+        artistManagementLabel.text = artistsManagement
     }
     
     override func viewDidLoad() {
@@ -33,6 +42,10 @@ class DetailsViewController: UIViewController {
 
     }
 
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
