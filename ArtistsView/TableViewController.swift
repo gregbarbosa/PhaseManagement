@@ -33,13 +33,12 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadData()
-        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.navigationBarHidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,11 +62,16 @@ class TableViewController: UITableViewController {
 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as TableViewCell
 
         var dict = artists.objectAtIndex(indexPath.row) as NSDictionary
         let artist = dict.objectForKey("Artist") as String
-        cell.textLabel.text = artist
+//        cell.textLabel.text = artist
+        cell.artistNameLabel.text = artist
+        var artistImage : UIImage = UIImage(named: "bnr_\(artist)")!
+//        cell.artistImageView.contentMode = .ScaleToFill
+        cell.artistImageView.image = artistImage
+        
         return cell
         
     }

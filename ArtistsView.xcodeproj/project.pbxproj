@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		8B805B4119FB33CC0009A7A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B4019FB33CC0009A7A2 /* AppDelegate.swift */; };
 		8B805B4619FB33CC0009A7A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B805B4419FB33CC0009A7A2 /* Main.storyboard */; };
-		8B805B4819FB33CC0009A7A2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B805B4719FB33CC0009A7A2 /* Images.xcassets */; };
-		8B805B4B19FB33CC0009A7A2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B805B4919FB33CC0009A7A2 /* LaunchScreen.xib */; };
 		8B805B5719FB33CC0009A7A2 /* ArtistsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B5619FB33CC0009A7A2 /* ArtistsViewTests.swift */; };
 		8B805B6119FB36230009A7A2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B6019FB36230009A7A2 /* TableViewController.swift */; };
 		8B805B6319FB37960009A7A2 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B6219FB37960009A7A2 /* DetailsViewController.swift */; };
 		8B805B9819FB4AC60009A7A2 /* ArtistData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B805B9719FB4AC60009A7A2 /* ArtistData.plist */; };
+		8BB3CD1319FC07C6009930B2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB3CD1219FC07C6009930B2 /* TableViewCell.swift */; };
+		8BB3CD1519FC1152009930B2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB3CD1419FC1151009930B2 /* LaunchScreen.xib */; };
+		8BB3CD1719FC116C009930B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB3CD1619FC116C009930B2 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +33,15 @@
 		8B805B3F19FB33CC0009A7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B805B4019FB33CC0009A7A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B805B4519FB33CC0009A7A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8B805B4719FB33CC0009A7A2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8B805B4A19FB33CC0009A7A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8B805B5019FB33CC0009A7A2 /* ArtistsViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtistsViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B805B5519FB33CC0009A7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B805B5619FB33CC0009A7A2 /* ArtistsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewTests.swift; sourceTree = "<group>"; };
 		8B805B6019FB36230009A7A2 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8B805B6219FB37960009A7A2 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		8B805B9719FB4AC60009A7A2 /* ArtistData.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ArtistData.plist; sourceTree = "<group>"; };
+		8BB3CD1219FC07C6009930B2 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		8BB3CD1419FC1151009930B2 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		8BB3CD1619FC116C009930B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +83,10 @@
 		8B805B3D19FB33CC0009A7A2 /* ArtistsView */ = {
 			isa = PBXGroup;
 			children = (
-				8B805B4019FB33CC0009A7A2 /* AppDelegate.swift */,
-				8B805B6219FB37960009A7A2 /* DetailsViewController.swift */,
+				8BB3CD1219FC07C6009930B2 /* TableViewCell.swift */,
 				8B805B6019FB36230009A7A2 /* TableViewController.swift */,
+				8B805B6219FB37960009A7A2 /* DetailsViewController.swift */,
 				8B805B4419FB33CC0009A7A2 /* Main.storyboard */,
-				8B805B9719FB4AC60009A7A2 /* ArtistData.plist */,
 				8B805B3E19FB33CC0009A7A2 /* Supporting Files */,
 			);
 			path = ArtistsView;
@@ -94,8 +95,10 @@
 		8B805B3E19FB33CC0009A7A2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8B805B4919FB33CC0009A7A2 /* LaunchScreen.xib */,
-				8B805B4719FB33CC0009A7A2 /* Images.xcassets */,
+				8B805B4019FB33CC0009A7A2 /* AppDelegate.swift */,
+				8B805B9719FB4AC60009A7A2 /* ArtistData.plist */,
+				8BB3CD1419FC1151009930B2 /* LaunchScreen.xib */,
+				8BB3CD1619FC116C009930B2 /* Images.xcassets */,
 				8B805B3F19FB33CC0009A7A2 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -167,6 +170,7 @@
 				TargetAttributes = {
 					8B805B3A19FB33CC0009A7A2 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 6TFBL9XBMK;
 					};
 					8B805B4F19FB33CC0009A7A2 = {
 						CreatedOnToolsVersion = 6.1;
@@ -198,10 +202,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BB3CD1519FC1152009930B2 /* LaunchScreen.xib in Resources */,
+				8BB3CD1719FC116C009930B2 /* Images.xcassets in Resources */,
 				8B805B4619FB33CC0009A7A2 /* Main.storyboard in Resources */,
-				8B805B4B19FB33CC0009A7A2 /* LaunchScreen.xib in Resources */,
 				8B805B9819FB4AC60009A7A2 /* ArtistData.plist in Resources */,
-				8B805B4819FB33CC0009A7A2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B805B4119FB33CC0009A7A2 /* AppDelegate.swift in Sources */,
+				8BB3CD1319FC07C6009930B2 /* TableViewCell.swift in Sources */,
 				8B805B6119FB36230009A7A2 /* TableViewController.swift in Sources */,
 				8B805B6319FB37960009A7A2 /* DetailsViewController.swift in Sources */,
 			);
@@ -250,14 +255,6 @@
 				8B805B4519FB33CC0009A7A2 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8B805B4919FB33CC0009A7A2 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8B805B4A19FB33CC0009A7A2 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
