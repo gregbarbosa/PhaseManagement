@@ -12,8 +12,6 @@ class TableViewController: UITableViewController {
 
     var artists = NSMutableArray()
     
-//    var artists = ["Alex Sin", "Downlink", "Dr. Ozi", "Killabyte", "Mark Instinct", "Pyramid Scheme", "Rekoil", "River Accorsi", "Said the Sky", "Supreme", "Trollphace", "Twine", "Twofold"]
-    
     func loadData() {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths.objectAtIndex(0) as NSString
