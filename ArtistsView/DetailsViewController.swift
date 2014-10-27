@@ -10,30 +10,81 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
+    // View Labels
     @IBOutlet weak var artistBioTextView: UITextView!
-    @IBOutlet weak var artistFacebookLabel: UILabel!
-    @IBOutlet weak var artistTwitterLabel: UILabel!
-    @IBOutlet weak var artistSoundcloudLabel: UILabel!
-    @IBOutlet weak var artistBookingLabel: UILabel!
-    @IBOutlet weak var artistManagementLabel: UILabel!
+    @IBOutlet weak var artistImageView: UIImageView!
     
+    @IBAction func showArtistBiography(sender: AnyObject) {
+        if (artistBioTextView.hidden) {
+            artistBioTextView.hidden = false
+        } else {
+            artistBioTextView.hidden = true
+        }
+    }
+    
+    @IBAction func twitter(sender: AnyObject) {
+        var tweetBotInstalled : Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "tweetbot:")!)
+        var twitterInstalled : Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "twitter:")!)
+        if (tweetBotInstalled) {
+            UIApplication.sharedApplication().openURL(NSURL(string:"tweetbot:///user_profile/DrOziOfficial")!)
+            println("Tweetbot installed!")
+        } else if (twitterInstalled) {
+            UIApplication.sharedApplication().openURL(NSURL(string:"twitter:///user?screen_name=DrOziOfficial")!)
+            println("Twitter installed!")
+        } else {
+            UIApplication.sharedApplication().openURL(NSURL(string: artistTwitter)!)
+        }
+    }
+    
+    @IBAction func facebook(sender: AnyObject) {
+        println("Facebook")
+        var installed : Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "facebook:")!)
+        if (installed) {
+            UIApplication.sharedApplication().openURL(NSURL(string: "facebook:")!)
+            println("Facebook installed!")
+        } else {
+            UIApplication.sharedApplication().openURL(NSURL(string: artistFacebook)!)
+            println("Facebook not installed!")
+        }
+    }
+    
+    @IBAction func soundcloud(sender: AnyObject) {
+        println("Soundcloud")
+        var installed : Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "soundcloud:")!)
+        if (installed) {
+            UIApplication.sharedApplication().openURL(NSURL(string: "soundcloud://users/\(artistSoundcloudID)")!)
+            println("Soundcloud installed!")
+        } else {
+            UIApplication.sharedApplication().openURL(NSURL(string: artistSoundcloud)!)
+            println("Soundcloud not installed!")
+        }
+    }
+    
+    @IBAction func mail(sender: AnyObject) {
+        println("Mail")
+    }
+    @IBAction func share(sender: AnyObject) {
+        println("Share Sheet")
+    }
+
+    // Variables
     var artistName = String()
     var artistBio = String()
     var artistFacebook = String()
     var artistTwitter = String()
     var artistSoundcloud = String()
-    var artistImage = String()
+    var artistSoundcloudID = Int()
     var artistsBooking = String()
     var artistsManagement = String()
+
     
     func configureView() {
         self.title = artistName
+        artistBioTextView.hidden = true
         artistBioTextView.text = artistBio
-        artistFacebookLabel.text = artistFacebook
-        artistTwitterLabel.text = artistTwitter
-        artistSoundcloudLabel.text = artistSoundcloud
-        artistBookingLabel.text = artistsBooking
-        artistManagementLabel.text = artistsManagement
+//        artistImageView.image = UIImage(named: "\(artistName)")
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "\(artistName)")!)
+        
     }
     
     override func viewDidLoad() {
@@ -44,6 +95,8 @@ class DetailsViewController: UIViewController {
 
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
+        self.navigationController?.toolbarHidden = false
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,11 +105,8 @@ class DetailsViewController: UIViewController {
     }
     
     // MARK: - Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
 
 }

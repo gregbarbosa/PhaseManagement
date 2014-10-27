@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B085E8919FDF7DB00A2FDFA /* ArtistData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B085E8819FDF7DB00A2FDFA /* ArtistData.plist */; };
 		8B805B4119FB33CC0009A7A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B4019FB33CC0009A7A2 /* AppDelegate.swift */; };
 		8B805B4619FB33CC0009A7A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B805B4419FB33CC0009A7A2 /* Main.storyboard */; };
 		8B805B5719FB33CC0009A7A2 /* ArtistsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B5619FB33CC0009A7A2 /* ArtistsViewTests.swift */; };
 		8B805B6119FB36230009A7A2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B6019FB36230009A7A2 /* TableViewController.swift */; };
 		8B805B6319FB37960009A7A2 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B6219FB37960009A7A2 /* DetailsViewController.swift */; };
-		8B805B9819FB4AC60009A7A2 /* ArtistData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B805B9719FB4AC60009A7A2 /* ArtistData.plist */; };
+		8B805B9819FB4AC60009A7A2 /* ArtistData.plist.bak in Resources */ = {isa = PBXBuildFile; fileRef = 8B805B9719FB4AC60009A7A2 /* ArtistData.plist.bak */; };
 		8BB3CD1319FC07C6009930B2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB3CD1219FC07C6009930B2 /* TableViewCell.swift */; };
 		8BB3CD1519FC1152009930B2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB3CD1419FC1151009930B2 /* LaunchScreen.xib */; };
 		8BB3CD1719FC116C009930B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB3CD1619FC116C009930B2 /* Images.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B085E8819FDF7DB00A2FDFA /* ArtistData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ArtistData.plist; sourceTree = "<group>"; };
 		8B805B3B19FB33CC0009A7A2 /* ArtistsView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtistsView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B805B3F19FB33CC0009A7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B805B4019FB33CC0009A7A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,7 +40,7 @@
 		8B805B5619FB33CC0009A7A2 /* ArtistsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewTests.swift; sourceTree = "<group>"; };
 		8B805B6019FB36230009A7A2 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8B805B6219FB37960009A7A2 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		8B805B9719FB4AC60009A7A2 /* ArtistData.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ArtistData.plist; sourceTree = "<group>"; };
+		8B805B9719FB4AC60009A7A2 /* ArtistData.plist.bak */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ArtistData.plist.bak; sourceTree = "<group>"; };
 		8BB3CD1219FC07C6009930B2 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8BB3CD1419FC1151009930B2 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		8BB3CD1619FC116C009930B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -96,10 +98,11 @@
 			isa = PBXGroup;
 			children = (
 				8B805B4019FB33CC0009A7A2 /* AppDelegate.swift */,
-				8B805B9719FB4AC60009A7A2 /* ArtistData.plist */,
+				8B805B9719FB4AC60009A7A2 /* ArtistData.plist.bak */,
+				8B085E8819FDF7DB00A2FDFA /* ArtistData.plist */,
+				8B805B3F19FB33CC0009A7A2 /* Info.plist */,
 				8BB3CD1419FC1151009930B2 /* LaunchScreen.xib */,
 				8BB3CD1619FC116C009930B2 /* Images.xcassets */,
-				8B805B3F19FB33CC0009A7A2 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -178,7 +181,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8B805B3619FB33CC0009A7A2 /* Build configuration list for PBXProject "ArtistsView" */;
+			buildConfigurationList = 8B805B3619FB33CC0009A7A2 /* Build configuration list for PBXProject "Phase Management" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -202,10 +205,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B085E8919FDF7DB00A2FDFA /* ArtistData.plist in Resources */,
 				8BB3CD1519FC1152009930B2 /* LaunchScreen.xib in Resources */,
 				8BB3CD1719FC116C009930B2 /* Images.xcassets in Resources */,
 				8B805B4619FB33CC0009A7A2 /* Main.storyboard in Resources */,
-				8B805B9819FB4AC60009A7A2 /* ArtistData.plist in Resources */,
+				8B805B9819FB4AC60009A7A2 /* ArtistData.plist.bak in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +347,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ArtistsView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +359,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ArtistsView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -396,7 +402,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8B805B3619FB33CC0009A7A2 /* Build configuration list for PBXProject "ArtistsView" */ = {
+		8B805B3619FB33CC0009A7A2 /* Build configuration list for PBXProject "Phase Management" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B805B5819FB33CC0009A7A2 /* Debug */,

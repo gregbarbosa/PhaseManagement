@@ -16,7 +16,6 @@ class TableViewController: UITableViewController {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths.objectAtIndex(0) as NSString
         let path = documentsDirectory.stringByAppendingPathComponent("ArtistData.plist")
-        
         let fileManager = NSFileManager.defaultManager()
         
         // Check if file exists
@@ -24,61 +23,54 @@ class TableViewController: UITableViewController {
             let bundle = NSBundle.mainBundle().pathForResource("ArtistData", ofType: "plist")
             fileManager.copyItemAtPath(bundle!, toPath: path, error: nil)
         }
-        
         var data = NSMutableArray(contentsOfFile: path)
         artists = data!
-        NSLog("The array: \([data!.count])")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadData()
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
     }
 
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = true
+        self.navigationController?.toolbarHidden = true
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
 
     // MARK: - Table view data source
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
         return 1
+        
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
         return artists.count
+        
     }
-
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as TableViewCell
 
+        // Load data from plist
         var dict = artists.objectAtIndex(indexPath.row) as NSDictionary
         let artist = dict.objectForKey("Artist") as String
-//        cell.textLabel.text = artist
+        
+        // Configure cell
         cell.artistNameLabel.text = artist
-        var artistImage : UIImage = UIImage(named: "bnr_\(artist)")!
-//        cell.artistImageView.contentMode = .ScaleToFill
-        cell.artistImageView.image = artistImage
+        cell.artistImageView.image = UIImage(named: "bnr_\(artist)")!
         
         return cell
         
     }
 
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "artistDetails" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
@@ -90,6 +82,7 @@ class TableViewController: UITableViewController {
                 let artistSoundcloud = dict.objectForKey("Soundcloud") as String
                 let artistsBooking = dict.objectForKey("Booking") as String
                 let artistsManagement = dict.objectForKey("Management") as String
+                let artistSoundcloudID = dict.objectForKey("Soundcloud_ID") as Int
                 (segue.destinationViewController as DetailsViewController).artistName = artist
                 (segue.destinationViewController as DetailsViewController).artistBio = artistBio
                 (segue.destinationViewController as DetailsViewController).artistFacebook = artistFacebook
@@ -97,9 +90,8 @@ class TableViewController: UITableViewController {
                 (segue.destinationViewController as DetailsViewController).artistSoundcloud = artistSoundcloud
                 (segue.destinationViewController as DetailsViewController).artistsBooking = artistsBooking
                 (segue.destinationViewController as DetailsViewController).artistsManagement = artistsManagement
+                (segue.destinationViewController as DetailsViewController).artistSoundcloudID = artistSoundcloudID
             }
         }
     }
-
-
 }

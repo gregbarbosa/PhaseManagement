@@ -17,7 +17,7 @@
                BlueprintIdentifier = "8B805B3A19FB33CC0009A7A2"
                BuildableName = "ArtistsView.app"
                BlueprintName = "ArtistsView"
-               ReferencedContainer = "container:ArtistsView.xcodeproj">
+               ReferencedContainer = "container:Phase Management.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "8B805B4F19FB33CC0009A7A2"
                BuildableName = "ArtistsViewTests.xctest"
                BlueprintName = "ArtistsViewTests"
-               ReferencedContainer = "container:ArtistsView.xcodeproj">
+               ReferencedContainer = "container:Phase Management.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "8B805B4F19FB33CC0009A7A2"
                BuildableName = "ArtistsViewTests.xctest"
                BlueprintName = "ArtistsViewTests"
-               ReferencedContainer = "container:ArtistsView.xcodeproj">
+               ReferencedContainer = "container:Phase Management.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -59,7 +59,7 @@
             BlueprintIdentifier = "8B805B3A19FB33CC0009A7A2"
             BuildableName = "ArtistsView.app"
             BlueprintName = "ArtistsView"
-            ReferencedContainer = "container:ArtistsView.xcodeproj">
+            ReferencedContainer = "container:Phase Management.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "8B805B3A19FB33CC0009A7A2"
             BuildableName = "ArtistsView.app"
             BlueprintName = "ArtistsView"
-            ReferencedContainer = "container:ArtistsView.xcodeproj">
+            ReferencedContainer = "container:Phase Management.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,7 +96,7 @@
             BlueprintIdentifier = "8B805B3A19FB33CC0009A7A2"
             BuildableName = "ArtistsView.app"
             BlueprintName = "ArtistsView"
-            ReferencedContainer = "container:ArtistsView.xcodeproj">
+            ReferencedContainer = "container:Phase Management.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
