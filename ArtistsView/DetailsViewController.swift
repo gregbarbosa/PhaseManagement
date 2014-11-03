@@ -1,6 +1,6 @@
 //
 //  DetailsViewController.swift
-//  ArtistsView
+//  Phase Management
 //
 //  Created by Developer on 10/24/14.
 //  Copyright (c) 2014 gregbarbosa. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController {
+class DetailsViewController: UIViewController, UIActionSheetDelegate {
 
     // View Labels
     @IBOutlet weak var artistBioTextView: UITextView!
@@ -62,9 +62,15 @@ class DetailsViewController: UIViewController {
     
     @IBAction func mail(sender: AnyObject) {
         println("Mail")
+        if (artistsBooking == artistsManagement) {
+            println("Booking and Management are the same. \(artistsManagement)")
+        }
+        
     }
+    
     @IBAction func share(sender: AnyObject) {
         println("Share Sheet")
+        
     }
 
     // Variables
@@ -97,6 +103,15 @@ class DetailsViewController: UIViewController {
         self.navigationController?.navigationBarHidden = false
         self.navigationController?.toolbarHidden = false
         
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.translucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clearColor()
+        
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
     }
     
     override func didReceiveMemoryWarning() {

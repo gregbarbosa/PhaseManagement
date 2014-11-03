@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  ArtistsView
+//  Phase Management
 //
 //  Created by Developer on 10/24/14.
 //  Copyright (c) 2014 gregbarbosa. All rights reserved.
@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-//        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
         
         return true
     }

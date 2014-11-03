@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8B805B3A19FB33CC0009A7A2"
-               BuildableName = "ArtistsView.app"
-               BlueprintName = "ArtistsView"
+               BuildableName = "Phase Management.app"
+               BlueprintName = "Phase Management"
                ReferencedContainer = "container:Phase Management.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8B805B4F19FB33CC0009A7A2"
-               BuildableName = "ArtistsViewTests.xctest"
-               BlueprintName = "ArtistsViewTests"
+               BuildableName = "Phase ManagementTests.xctest"
+               BlueprintName = "Phase ManagementTests"
                ReferencedContainer = "container:Phase Management.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,8 +47,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8B805B4F19FB33CC0009A7A2"
-               BuildableName = "ArtistsViewTests.xctest"
-               BlueprintName = "ArtistsViewTests"
+               BuildableName = "Phase ManagementTests.xctest"
+               BlueprintName = "Phase ManagementTests"
                ReferencedContainer = "container:Phase Management.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -57,8 +57,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8B805B3A19FB33CC0009A7A2"
-            BuildableName = "ArtistsView.app"
-            BlueprintName = "ArtistsView"
+            BuildableName = "Phase Management.app"
+            BlueprintName = "Phase Management"
             ReferencedContainer = "container:Phase Management.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -76,8 +76,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8B805B3A19FB33CC0009A7A2"
-            BuildableName = "ArtistsView.app"
-            BlueprintName = "ArtistsView"
+            BuildableName = "Phase Management.app"
+            BlueprintName = "Phase Management"
             ReferencedContainer = "container:Phase Management.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -94,8 +94,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8B805B3A19FB33CC0009A7A2"
-            BuildableName = "ArtistsView.app"
-            BlueprintName = "ArtistsView"
+            BuildableName = "Phase Management.app"
+            BlueprintName = "Phase Management"
             ReferencedContainer = "container:Phase Management.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

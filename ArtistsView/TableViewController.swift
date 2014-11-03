@@ -1,6 +1,6 @@
 //
 //  TableViewController.swift
-//  ArtistsView
+//  Phase Management
 //
 //  Created by Developer on 10/24/14.
 //  Copyright (c) 2014 gregbarbosa. All rights reserved.
@@ -36,7 +36,6 @@ class TableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = true
         self.navigationController?.toolbarHidden = true
-        
     }
     
     override func didReceiveMemoryWarning() {

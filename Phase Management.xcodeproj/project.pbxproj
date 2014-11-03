@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8B085E8919FDF7DB00A2FDFA /* ArtistData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B085E8819FDF7DB00A2FDFA /* ArtistData.plist */; };
+		8B085E8B19FDFC3F00A2FDFA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B085E8A19FDFC3F00A2FDFA /* Default-568h@2x.png */; };
 		8B805B4119FB33CC0009A7A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B4019FB33CC0009A7A2 /* AppDelegate.swift */; };
 		8B805B4619FB33CC0009A7A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B805B4419FB33CC0009A7A2 /* Main.storyboard */; };
-		8B805B5719FB33CC0009A7A2 /* ArtistsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B5619FB33CC0009A7A2 /* ArtistsViewTests.swift */; };
 		8B805B6119FB36230009A7A2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B6019FB36230009A7A2 /* TableViewController.swift */; };
 		8B805B6319FB37960009A7A2 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B6219FB37960009A7A2 /* DetailsViewController.swift */; };
 		8B805B9819FB4AC60009A7A2 /* ArtistData.plist.bak in Resources */ = {isa = PBXBuildFile; fileRef = 8B805B9719FB4AC60009A7A2 /* ArtistData.plist.bak */; };
@@ -19,25 +19,13 @@
 		8BB3CD1719FC116C009930B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB3CD1619FC116C009930B2 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8B805B5119FB33CC0009A7A2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8B805B3319FB33CC0009A7A2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8B805B3A19FB33CC0009A7A2;
-			remoteInfo = ArtistsView;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		8B085E8819FDF7DB00A2FDFA /* ArtistData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ArtistData.plist; sourceTree = "<group>"; };
-		8B805B3B19FB33CC0009A7A2 /* ArtistsView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtistsView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B085E8A19FDFC3F00A2FDFA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8B805B3B19FB33CC0009A7A2 /* Phase Management.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Phase Management.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B805B3F19FB33CC0009A7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B805B4019FB33CC0009A7A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B805B4519FB33CC0009A7A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8B805B5019FB33CC0009A7A2 /* ArtistsViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtistsViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B805B5519FB33CC0009A7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B805B5619FB33CC0009A7A2 /* ArtistsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewTests.swift; sourceTree = "<group>"; };
 		8B805B6019FB36230009A7A2 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8B805B6219FB37960009A7A2 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		8B805B9719FB4AC60009A7A2 /* ArtistData.plist.bak */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ArtistData.plist.bak; sourceTree = "<group>"; };
@@ -54,21 +42,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B805B4D19FB33CC0009A7A2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		8B805B3219FB33CC0009A7A2 = {
 			isa = PBXGroup;
 			children = (
-				8B805B3D19FB33CC0009A7A2 /* ArtistsView */,
-				8B805B5319FB33CC0009A7A2 /* ArtistsViewTests */,
+				8B085E8A19FDFC3F00A2FDFA /* Default-568h@2x.png */,
+				8B805B3D19FB33CC0009A7A2 /* Phase Management */,
 				8B805B3C19FB33CC0009A7A2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,13 +57,12 @@
 		8B805B3C19FB33CC0009A7A2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B805B3B19FB33CC0009A7A2 /* ArtistsView.app */,
-				8B805B5019FB33CC0009A7A2 /* ArtistsViewTests.xctest */,
+				8B805B3B19FB33CC0009A7A2 /* Phase Management.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8B805B3D19FB33CC0009A7A2 /* ArtistsView */ = {
+		8B805B3D19FB33CC0009A7A2 /* Phase Management */ = {
 			isa = PBXGroup;
 			children = (
 				8BB3CD1219FC07C6009930B2 /* TableViewCell.swift */,
@@ -91,6 +71,7 @@
 				8B805B4419FB33CC0009A7A2 /* Main.storyboard */,
 				8B805B3E19FB33CC0009A7A2 /* Supporting Files */,
 			);
+			name = "Phase Management";
 			path = ArtistsView;
 			sourceTree = "<group>";
 		};
@@ -107,29 +88,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8B805B5319FB33CC0009A7A2 /* ArtistsViewTests */ = {
-			isa = PBXGroup;
-			children = (
-				8B805B5619FB33CC0009A7A2 /* ArtistsViewTests.swift */,
-				8B805B5419FB33CC0009A7A2 /* Supporting Files */,
-			);
-			path = ArtistsViewTests;
-			sourceTree = "<group>";
-		};
-		8B805B5419FB33CC0009A7A2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8B805B5519FB33CC0009A7A2 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8B805B3A19FB33CC0009A7A2 /* ArtistsView */ = {
+		8B805B3A19FB33CC0009A7A2 /* Phase Management */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B805B5A19FB33CC0009A7A2 /* Build configuration list for PBXNativeTarget "ArtistsView" */;
+			buildConfigurationList = 8B805B5A19FB33CC0009A7A2 /* Build configuration list for PBXNativeTarget "Phase Management" */;
 			buildPhases = (
 				8B805B3719FB33CC0009A7A2 /* Sources */,
 				8B805B3819FB33CC0009A7A2 /* Frameworks */,
@@ -139,28 +103,10 @@
 			);
 			dependencies = (
 			);
-			name = ArtistsView;
+			name = "Phase Management";
 			productName = ArtistsView;
-			productReference = 8B805B3B19FB33CC0009A7A2 /* ArtistsView.app */;
+			productReference = 8B805B3B19FB33CC0009A7A2 /* Phase Management.app */;
 			productType = "com.apple.product-type.application";
-		};
-		8B805B4F19FB33CC0009A7A2 /* ArtistsViewTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8B805B5D19FB33CC0009A7A2 /* Build configuration list for PBXNativeTarget "ArtistsViewTests" */;
-			buildPhases = (
-				8B805B4C19FB33CC0009A7A2 /* Sources */,
-				8B805B4D19FB33CC0009A7A2 /* Frameworks */,
-				8B805B4E19FB33CC0009A7A2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8B805B5219FB33CC0009A7A2 /* PBXTargetDependency */,
-			);
-			name = ArtistsViewTests;
-			productName = ArtistsViewTests;
-			productReference = 8B805B5019FB33CC0009A7A2 /* ArtistsViewTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -174,10 +120,6 @@
 					8B805B3A19FB33CC0009A7A2 = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = 6TFBL9XBMK;
-					};
-					8B805B4F19FB33CC0009A7A2 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 8B805B3A19FB33CC0009A7A2;
 					};
 				};
 			};
@@ -194,8 +136,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8B805B3A19FB33CC0009A7A2 /* ArtistsView */,
-				8B805B4F19FB33CC0009A7A2 /* ArtistsViewTests */,
+				8B805B3A19FB33CC0009A7A2 /* Phase Management */,
 			);
 		};
 /* End PBXProject section */
@@ -210,13 +151,7 @@
 				8BB3CD1719FC116C009930B2 /* Images.xcassets in Resources */,
 				8B805B4619FB33CC0009A7A2 /* Main.storyboard in Resources */,
 				8B805B9819FB4AC60009A7A2 /* ArtistData.plist.bak in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8B805B4E19FB33CC0009A7A2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				8B085E8B19FDFC3F00A2FDFA /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,23 +169,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B805B4C19FB33CC0009A7A2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8B805B5719FB33CC0009A7A2 /* ArtistsViewTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8B805B5219FB33CC0009A7A2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8B805B3A19FB33CC0009A7A2 /* ArtistsView */;
-			targetProxy = 8B805B5119FB33CC0009A7A2 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8B805B4419FB33CC0009A7A2 /* Main.storyboard */ = {
@@ -346,7 +265,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = ArtistsView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ArtistsView/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -358,44 +277,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = ArtistsView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ArtistsView/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		8B805B5E19FB33CC0009A7A2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ArtistsViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtistsView.app/ArtistsView";
-			};
-			name = Debug;
-		};
-		8B805B5F19FB33CC0009A7A2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ArtistsViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtistsView.app/ArtistsView";
 			};
 			name = Release;
 		};
@@ -411,20 +296,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B805B5A19FB33CC0009A7A2 /* Build configuration list for PBXNativeTarget "ArtistsView" */ = {
+		8B805B5A19FB33CC0009A7A2 /* Build configuration list for PBXNativeTarget "Phase Management" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B805B5B19FB33CC0009A7A2 /* Debug */,
 				8B805B5C19FB33CC0009A7A2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8B805B5D19FB33CC0009A7A2 /* Build configuration list for PBXNativeTarget "ArtistsViewTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8B805B5E19FB33CC0009A7A2 /* Debug */,
-				8B805B5F19FB33CC0009A7A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
