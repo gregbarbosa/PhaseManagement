@@ -82,6 +82,7 @@ class TableViewController: UITableViewController {
                 let artistsBooking = dict.objectForKey("Booking") as String
                 let artistsManagement = dict.objectForKey("Management") as String
                 let artistSoundcloudID = dict.objectForKey("Soundcloud_ID") as Int
+                let artistFacebookID = dict.objectForKey("Facebook_ID") as Int
                 (segue.destinationViewController as DetailsViewController).artistName = artist
                 (segue.destinationViewController as DetailsViewController).artistBio = artistBio
                 (segue.destinationViewController as DetailsViewController).artistFacebook = artistFacebook
@@ -90,6 +91,7 @@ class TableViewController: UITableViewController {
                 (segue.destinationViewController as DetailsViewController).artistsBooking = artistsBooking
                 (segue.destinationViewController as DetailsViewController).artistsManagement = artistsManagement
                 (segue.destinationViewController as DetailsViewController).artistSoundcloudID = artistSoundcloudID
+                (segue.destinationViewController as DetailsViewController).artistFacebookID = artistFacebookID
             }
         }
     }

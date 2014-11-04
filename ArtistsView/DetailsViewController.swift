@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class DetailsViewController: UIViewController, UIActionSheetDelegate {
+class DetailsViewController: UIViewController, UIActionSheetDelegate, MFMailComposeViewControllerDelegate {
 
     // View Labels
     @IBOutlet weak var artistBioTextView: UITextView!
@@ -26,21 +27,20 @@ class DetailsViewController: UIViewController, UIActionSheetDelegate {
         var tweetBotInstalled : Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "tweetbot:")!)
         var twitterInstalled : Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "twitter:")!)
         if (tweetBotInstalled) {
-            UIApplication.sharedApplication().openURL(NSURL(string:"tweetbot:///user_profile/DrOziOfficial")!)
+            UIApplication.sharedApplication().openURL(NSURL(string: "tweetbot:///user_profile/\(artistTwitter)")!)
             println("Tweetbot installed!")
         } else if (twitterInstalled) {
-            UIApplication.sharedApplication().openURL(NSURL(string:"twitter:///user?screen_name=DrOziOfficial")!)
+            UIApplication.sharedApplication().openURL(NSURL(string: "twitter:///user?screen_name=\(artistTwitter)")!)
             println("Twitter installed!")
         } else {
-            UIApplication.sharedApplication().openURL(NSURL(string: artistTwitter)!)
+            UIApplication.sharedApplication().openURL(NSURL(string: "https://www.twitter.com/\(artistTwitter)")!)
         }
     }
     
     @IBAction func facebook(sender: AnyObject) {
-        println("Facebook")
-        var installed : Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "facebook:")!)
+        var installed : Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "fb:")!)
         if (installed) {
-            UIApplication.sharedApplication().openURL(NSURL(string: "facebook:")!)
+            UIApplication.sharedApplication().openURL(NSURL(string: "fb://profile/\(artistFacebookID)")!)
             println("Facebook installed!")
         } else {
             UIApplication.sharedApplication().openURL(NSURL(string: artistFacebook)!)
@@ -49,7 +49,6 @@ class DetailsViewController: UIViewController, UIActionSheetDelegate {
     }
     
     @IBAction func soundcloud(sender: AnyObject) {
-        println("Soundcloud")
         var installed : Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "soundcloud:")!)
         if (installed) {
             UIApplication.sharedApplication().openURL(NSURL(string: "soundcloud://users/\(artistSoundcloudID)")!)
@@ -59,27 +58,87 @@ class DetailsViewController: UIViewController, UIActionSheetDelegate {
             println("Soundcloud not installed!")
         }
     }
-    
+
     @IBAction func mail(sender: AnyObject) {
-        println("Mail")
         if (artistsBooking == artistsManagement) {
             println("Booking and Management are the same. \(artistsManagement)")
         }
         
+        // Mail Send
+        let mailComposeViewController = configuredMailComposeViewController()
+//        if MFMailComposeViewController.canSendMail() {
+//            self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+//        } else {
+//            self.showSendMailErrorAlert()
+//        }
+        
+        // Mail Action Sheet
+        let alertController = UIAlertController(title: "Mail", message: "What are you looking for?", preferredStyle: .ActionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            // ...
+        }
+        alertController.addAction(cancelAction)
+        
+        let bookingOption = UIAlertAction(title: "Booking", style: .Default) { (action) in
+            // ...
+            self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+            self.configuredMailComposeViewController().setToRecipients(["\(self.artistsBooking)"])
+            self.configuredMailComposeViewController().setSubject("Booking \(self.artistName)")
+            self.configuredMailComposeViewController().setMessageBody("Hi!\n I'm looking for booking info on \(self.artistName).", isHTML: false)
+        }
+        alertController.addAction(bookingOption)
+        
+        let mgmtOption = UIAlertAction(title: "Management", style: .Default) { (action) in
+            // ...
+            self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+            self.configuredMailComposeViewController().setToRecipients(["\(self.artistsManagement)"])
+            self.configuredMailComposeViewController().setSubject("Management info on \(self.artistName)")
+            self.configuredMailComposeViewController().setMessageBody("Hi!\n I'm looking for some management info on \(self.artistName).", isHTML: false)
+        }
+        alertController.addAction(mgmtOption)
+        
+        self.presentViewController(alertController, animated: true) {
+            // ...
+        }
+        
+    }
+    
+    // MARK: In-App Mail Composition
+    func configuredMailComposeViewController() -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
+        
+        mailComposerVC.setToRecipients(["someone@somewhere.com"])
+        mailComposerVC.setSubject("Sending you an in-app e-mail...")
+        mailComposerVC.setMessageBody("Sending e-mail in-app is not so bad!", isHTML: false)
+        
+        return mailComposerVC
+    }
+    
+    func showSendMailErrorAlert() {
+        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
+        sendMailErrorAlert.show()
+    }
+    
+    // MARK: MFMailComposeViewControllerDelegate Method
+    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func share(sender: AnyObject) {
         println("Share Sheet")
         
     }
-
-    // Variables
+    
+    // MARK: Variables
     var artistName = String()
     var artistBio = String()
     var artistFacebook = String()
     var artistTwitter = String()
     var artistSoundcloud = String()
     var artistSoundcloudID = Int()
+    var artistFacebookID = Int()
     var artistsBooking = String()
     var artistsManagement = String()
 
@@ -98,7 +157,7 @@ class DetailsViewController: UIViewController, UIActionSheetDelegate {
         self.configureView()
 
     }
-
+    
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
         self.navigationController?.toolbarHidden = false
