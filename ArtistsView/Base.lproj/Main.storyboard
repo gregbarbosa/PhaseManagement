@@ -117,20 +117,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HVh-un-Vpr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HVh-un-Vpr">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HVh-un-Vpr" firstAttribute="leading" secondItem="4ad-Vk-Iaf" secondAttribute="leading" id="B9j-qe-zrW"/>
-                            <constraint firstItem="hui-yE-IQn" firstAttribute="top" secondItem="0n2-lb-JVJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Df7-Ne-CsN"/>
-                            <constraint firstAttribute="bottom" secondItem="hui-yE-IQn" secondAttribute="bottom" constant="20" symbolic="YES" id="T45-6U-UfH"/>
-                            <constraint firstItem="hui-yE-IQn" firstAttribute="centerX" secondItem="HVh-un-Vpr" secondAttribute="centerX" id="TCN-5i-fPU"/>
-                            <constraint firstAttribute="trailing" secondItem="HVh-un-Vpr" secondAttribute="trailing" id="Wol-Ff-NsN"/>
-                            <constraint firstItem="HVh-un-Vpr" firstAttribute="top" secondItem="4ad-Vk-Iaf" secondAttribute="top" id="Xid-P3-6rQ"/>
-                            <constraint firstItem="hui-yE-IQn" firstAttribute="leading" secondItem="4ad-Vk-Iaf" secondAttribute="leadingMargin" id="Z9C-MD-iin"/>
-                            <constraint firstItem="HVh-un-Vpr" firstAttribute="bottom" secondItem="YTP-8m-r5C" secondAttribute="top" id="xbs-oj-Wqs"/>
+                            <constraint firstItem="hui-yE-IQn" firstAttribute="top" secondItem="0n2-lb-JVJ" secondAttribute="bottom" id="2iF-Ad-M9o"/>
+                            <constraint firstAttribute="bottom" secondItem="hui-yE-IQn" secondAttribute="bottom" constant="20" symbolic="YES" id="2rt-JK-zSR"/>
+                            <constraint firstItem="HVh-un-Vpr" firstAttribute="centerX" secondItem="hui-yE-IQn" secondAttribute="centerX" id="9UD-1o-aEP"/>
+                            <constraint firstItem="HVh-un-Vpr" firstAttribute="leading" secondItem="4ad-Vk-Iaf" secondAttribute="leading" id="QEg-Bw-4Gk"/>
+                            <constraint firstAttribute="bottom" secondItem="HVh-un-Vpr" secondAttribute="bottom" id="cH5-8h-DtP"/>
+                            <constraint firstItem="HVh-un-Vpr" firstAttribute="top" secondItem="4ad-Vk-Iaf" secondAttribute="top" id="hkj-U9-uNx"/>
+                            <constraint firstItem="hui-yE-IQn" firstAttribute="leading" secondItem="4ad-Vk-Iaf" secondAttribute="leadingMargin" id="o9c-pY-Q5h"/>
+                            <constraint firstAttribute="trailing" secondItem="HVh-un-Vpr" secondAttribute="trailing" id="ymD-gp-QAD"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -138,14 +138,14 @@
                                 <exclude reference="HVh-un-Vpr"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Df7-Ne-CsN"/>
-                                <exclude reference="T45-6U-UfH"/>
-                                <exclude reference="TCN-5i-fPU"/>
-                                <exclude reference="Z9C-MD-iin"/>
-                                <exclude reference="B9j-qe-zrW"/>
-                                <exclude reference="Wol-Ff-NsN"/>
-                                <exclude reference="Xid-P3-6rQ"/>
-                                <exclude reference="xbs-oj-Wqs"/>
+                                <exclude reference="2iF-Ad-M9o"/>
+                                <exclude reference="2rt-JK-zSR"/>
+                                <exclude reference="o9c-pY-Q5h"/>
+                                <exclude reference="9UD-1o-aEP"/>
+                                <exclude reference="QEg-Bw-4Gk"/>
+                                <exclude reference="cH5-8h-DtP"/>
+                                <exclude reference="hkj-U9-uNx"/>
+                                <exclude reference="ymD-gp-QAD"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -154,14 +154,14 @@
                                 <include reference="HVh-un-Vpr"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Df7-Ne-CsN"/>
-                                <include reference="T45-6U-UfH"/>
-                                <include reference="TCN-5i-fPU"/>
-                                <include reference="Z9C-MD-iin"/>
-                                <include reference="B9j-qe-zrW"/>
-                                <include reference="Wol-Ff-NsN"/>
-                                <include reference="Xid-P3-6rQ"/>
-                                <include reference="xbs-oj-Wqs"/>
+                                <include reference="2iF-Ad-M9o"/>
+                                <include reference="2rt-JK-zSR"/>
+                                <include reference="o9c-pY-Q5h"/>
+                                <include reference="9UD-1o-aEP"/>
+                                <include reference="QEg-Bw-4Gk"/>
+                                <include reference="cH5-8h-DtP"/>
+                                <include reference="hkj-U9-uNx"/>
+                                <include reference="ymD-gp-QAD"/>
                             </mask>
                         </variation>
                     </view>
@@ -233,9 +233,8 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="TPa-x2-U5V">
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.10000000000000001" contentMode="scaleToFill" barStyle="black" id="TPa-x2-U5V">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </toolbar>
                     <connections>
                         <segue destination="z1i-ao-CLt" kind="relationship" relationship="rootViewController" id="Kpi-ku-l3X"/>
