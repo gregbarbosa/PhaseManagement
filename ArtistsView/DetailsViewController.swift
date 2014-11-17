@@ -11,35 +11,77 @@ import MessageUI
 
 class DetailsViewController: UIViewController, UIActionSheetDelegate, MFMailComposeViewControllerDelegate {
 
-    // View Labels
+    // MARK: Variables
+    var artistName = String()
+    var artistBio = String()
+    var artistFacebook = String()
+    var artistTwitter = String()
+    var artistSoundcloud = String()
+    var artistSoundcloudID = Int()
+    var artistFacebookID = Int()
+    var artistsBooking = String()
+    var artistsManagement = String()
     @IBOutlet weak var artistBioTextView: UITextView!
     @IBOutlet weak var artistImageView: UIImageView!
-    
+
+    // MARK: View Loading
+    func configureView() {
+        self.title = artistName
+        artistBioTextView.hidden = true
+        artistBioTextView.text = artistBio
+        artistImageView.image = UIImage(named: "\(artistName)")
+        artistImageView.clipsToBounds = true
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.configureView()
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.toolbarHidden = false
+
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.translucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clearColor()
+
+    }
+
+    override func viewWillDisappear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+
+    }
+
+    // View Labels
     @IBAction func showArtistBiography(sender: AnyObject) {
-        if (artistBioTextView.hidden) {
+        if(artistBioTextView.hidden) {
             artistBioTextView.hidden = false
         } else {
             artistBioTextView.hidden = true
         }
     }
-    
+
+    // MARK: Artist's Social Links
     @IBAction func twitter(sender: AnyObject) {
-        var tweetBotInstalled : Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "tweetbot:")!)
-        var twitterInstalled : Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "twitter:")!)
-        if (tweetBotInstalled) {
+        if (UIApplication.sharedApplication().canOpenURL(NSURL(string: "tweetbot:")!)) {
             UIApplication.sharedApplication().openURL(NSURL(string: "tweetbot:///user_profile/\(artistTwitter)")!)
             println("Tweetbot installed!")
-        } else if (twitterInstalled) {
+        } else if (UIApplication.sharedApplication().canOpenURL(NSURL(string: "twitter:")!)) {
             UIApplication.sharedApplication().openURL(NSURL(string: "twitter:///user?screen_name=\(artistTwitter)")!)
             println("Twitter installed!")
         } else {
             UIApplication.sharedApplication().openURL(NSURL(string: "https://www.twitter.com/\(artistTwitter)")!)
         }
     }
-    
     @IBAction func facebook(sender: AnyObject) {
-        var installed : Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "fb:")!)
-        if (installed) {
+        if (UIApplication.sharedApplication().canOpenURL(NSURL(string: "fb:")!)) {
             UIApplication.sharedApplication().openURL(NSURL(string: "fb://profile/\(artistFacebookID)")!)
             println("Facebook installed!")
         } else {
@@ -47,10 +89,8 @@ class DetailsViewController: UIViewController, UIActionSheetDelegate, MFMailComp
             println("Facebook not installed!")
         }
     }
-    
     @IBAction func soundcloud(sender: AnyObject) {
-        var installed : Bool = UIApplication.sharedApplication().canOpenURL(NSURL(string: "soundcloud:")!)
-        if (installed) {
+        if (UIApplication.sharedApplication().canOpenURL(NSURL(string: "soundcloud:")!)) {
             UIApplication.sharedApplication().openURL(NSURL(string: "soundcloud://users/\(artistSoundcloudID)")!)
             println("Soundcloud installed!")
         } else {
@@ -59,11 +99,12 @@ class DetailsViewController: UIViewController, UIActionSheetDelegate, MFMailComp
         }
     }
 
+    // MARK: Artist Contact and Sharing
     @IBAction func mail(sender: AnyObject) {
 //        if (artistsBooking == artistsManagement) {
 //            println("Booking and Management are the same. \(artistsManagement)")
 //        }
-        
+
         // Mail Action Sheet
         let alertController = UIAlertController(title: "Mail", message: "What are you looking for?", preferredStyle: .ActionSheet)
         
@@ -89,59 +130,13 @@ class DetailsViewController: UIViewController, UIActionSheetDelegate, MFMailComp
         }
         
     }
-    
     @IBAction func share(sender: AnyObject) {
         println("Share Sheet")
-        
     }
-    
-    // MARK: Variables
-    var artistName = String()
-    var artistBio = String()
-    var artistFacebook = String()
-    var artistTwitter = String()
-    var artistSoundcloud = String()
-    var artistSoundcloudID = Int()
-    var artistFacebookID = Int()
-    var artistsBooking = String()
-    var artistsManagement = String()
-    
-    func configureView() {
-        self.title = artistName
-        artistBioTextView.hidden = true
-        artistBioTextView.text = artistBio
-        artistImageView.image = UIImage(named: "\(artistName)")
-        artistImageView.clipsToBounds = true
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.configureView()
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBarHidden = false
-        self.navigationController?.toolbarHidden = false
-        
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
-        self.navigationController?.view.backgroundColor = UIColor.clearColor()
-        
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        self.navigationController?.navigationBarHidden = true
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
 
-    }
     
     // MARK: - Navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//    }
 
 }

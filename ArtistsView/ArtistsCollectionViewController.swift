@@ -12,8 +12,10 @@ let cellIdentifier = "artistCell"
 
 class ArtistsCollectionViewController: UICollectionViewController {
 
+    // MARK: Variables
     var artists = NSMutableArray()
 
+    // MARK: View Loading
     func loadData() {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths.objectAtIndex(0) as NSString
@@ -27,12 +29,13 @@ class ArtistsCollectionViewController: UICollectionViewController {
         }
         var data = NSMutableArray(contentsOfFile: path)
         artists = data!
+
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadData()
-
+        
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -44,15 +47,12 @@ class ArtistsCollectionViewController: UICollectionViewController {
         super.didReceiveMemoryWarning()
     }
 
-    // MARK: UICollectionViewDataSource
+    // MARK: UICollectionView
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        //#warning Incomplete method implementation -- Return the number of sections
         return 1
     }
 
-
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //#warning Incomplete method implementation -- Return the number of items in the section
         return artists.count
     }
 
@@ -66,11 +66,10 @@ class ArtistsCollectionViewController: UICollectionViewController {
         // Configure cell
         artistCell.artistNameLabel.text = artist
         artistCell.image = UIImage(named: "bnr_\(artist)")!
-//        artistCell.image = UIImage(named: artist)!
-        println("bnr_\(artist)")
         return artistCell
     }
 
+    // MARK: Parallax Effect on UICollectionViewCells
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         if let visibleCells = collectionView.visibleCells() as? [ArtistCollectionViewCell] {
             for artistCell in visibleCells {
@@ -79,8 +78,7 @@ class ArtistsCollectionViewController: UICollectionViewController {
             }
         }
     }
-    
-    // MARK: UICollectionViewDelegate
+
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "artistDetails" {
