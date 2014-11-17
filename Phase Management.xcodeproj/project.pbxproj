@@ -10,7 +10,6 @@
 		27C216EE1A15C37500374FFB /* ArtistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C216ED1A15C37500374FFB /* ArtistCollectionViewCell.swift */; };
 		27C216F21A15C40800374FFB /* ArtistsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C216F11A15C40800374FFB /* ArtistsCollectionViewController.swift */; };
 		8B085E8919FDF7DB00A2FDFA /* ArtistData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B085E8819FDF7DB00A2FDFA /* ArtistData.plist */; };
-		8B085E8B19FDFC3F00A2FDFA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B085E8A19FDFC3F00A2FDFA /* Default-568h@2x.png */; };
 		8B805B4119FB33CC0009A7A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B4019FB33CC0009A7A2 /* AppDelegate.swift */; };
 		8B805B4619FB33CC0009A7A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B805B4419FB33CC0009A7A2 /* Main.storyboard */; };
 		8B805B6119FB36230009A7A2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B6019FB36230009A7A2 /* TableViewController.swift */; };
@@ -24,7 +23,6 @@
 		27C216ED1A15C37500374FFB /* ArtistCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistCollectionViewCell.swift; sourceTree = "<group>"; };
 		27C216F11A15C40800374FFB /* ArtistsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsCollectionViewController.swift; sourceTree = "<group>"; };
 		8B085E8819FDF7DB00A2FDFA /* ArtistData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ArtistData.plist; sourceTree = "<group>"; };
-		8B085E8A19FDFC3F00A2FDFA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8B805B3B19FB33CC0009A7A2 /* Phase Management.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Phase Management.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B805B3F19FB33CC0009A7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B805B4019FB33CC0009A7A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 		8B805B3219FB33CC0009A7A2 = {
 			isa = PBXGroup;
 			children = (
-				8B085E8A19FDFC3F00A2FDFA /* Default-568h@2x.png */,
 				8B805B3D19FB33CC0009A7A2 /* Phase Management */,
 				8B805B3C19FB33CC0009A7A2 /* Products */,
 			);
@@ -169,7 +166,6 @@
 				8BB3CD1519FC1152009930B2 /* LaunchScreen.xib in Resources */,
 				8BB3CD1719FC116C009930B2 /* Images.xcassets in Resources */,
 				8B805B4619FB33CC0009A7A2 /* Main.storyboard in Resources */,
-				8B085E8B19FDFC3F00A2FDFA /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
