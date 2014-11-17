@@ -112,31 +112,11 @@ class DetailsViewController: UIViewController, UIActionSheetDelegate, MFMailComp
         artistBioTextView.text = artistBio
         artistImageView.image = UIImage(named: "\(artistName)")
         artistImageView.clipsToBounds = true
-//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "\(artistName)")!)
-        
-        // Stretches Image Weirdly
-        /*
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "\(artistName)")?.drawInRect(self.view.bounds)
-        var backgroundImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        self.view.backgroundColor = UIColor(patternImage: backgroundImage)
-        
-*/
-        
-        // Center and Aspect Fit Image
-        /*
-        artistImageView.contentMode = UIViewContentMode.Center
-        var artistImage: UIImage = UIImage(named: "\(artistName)")!
-        if (artistImageView.bounds.size.width > artistImage.size.width && artistImageView.bounds.size.height > artistImage.size.height) {
-            artistImageView.contentMode = UIViewContentMode.ScaleAspectFit
-        }*/
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureView()
-
     }
     
     override func viewWillAppear(animated: Bool) {

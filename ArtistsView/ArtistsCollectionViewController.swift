@@ -33,17 +33,12 @@ class ArtistsCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         self.loadData()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-//        self.collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
     }
 
-//    override func viewWillAppear(animated: Bool) {
-//        self.navigationController?.navigationBarHidden = true
-//        self.navigationController?.toolbarHidden = true
-//    }
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+        self.navigationController?.toolbarHidden = true
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -89,9 +84,9 @@ class ArtistsCollectionViewController: UICollectionViewController {
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "artistDetails" {
-            //            if let indexPath = self.tableView.indexPathForSelectedRow() {
-            if let indexPath = self.collectionView.indexPathsForSelectedItems() {
-                var dict = artists.objectAtIndex(0) as NSDictionary
+            let cell = sender as UICollectionViewCell
+            if let indexPath = self.collectionView.indexPathForCell(cell) {
+                var dict = artists.objectAtIndex(indexPath.row) as NSDictionary
                 let artist = dict.objectForKey("Artist") as String
                 let artistBio = dict.objectForKey("Bio") as String
                 let artistFacebook = dict.objectForKey("Facebook") as String

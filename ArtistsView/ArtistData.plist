@@ -130,28 +130,6 @@ The perfect combination of intricate melodies and filthy basslines, Killabyte pr
 	</dict>
 	<dict>
 		<key>Artist</key>
-		<string>Pyramid Scheme</string>
-		<key>Image</key>
-		<string></string>
-		<key>Bio</key>
-		<string>Sterling Pike x Adam LaRossa</string>
-		<key>Facebook</key>
-		<string>https://www.facebook.com/pyramidschemeedm</string>
-		<key>Facebook_ID</key>
-		<integer>223222191204765</integer>
-		<key>Twitter</key>
-		<string>PyramidSchemedm</string>
-		<key>Soundcloud</key>
-		<string>https://soundcloud.com/pyramidschemeedm</string>
-		<key>Soundcloud_ID</key>
-		<integer>85971524</integer>
-		<key>Booking</key>
-		<string>ashley@phasemgmt.com</string>
-		<key>Management</key>
-		<string>ashley@phasemgmt.com</string>
-	</dict>
-	<dict>
-		<key>Artist</key>
 		<string>Rekoil</string>
 		<key>Image</key>
 		<string></string>
@@ -314,7 +292,7 @@ More than just accomplished producers, the transatlantic duo know how to put on 
 		<key>Facebook</key>
 		<string>https://www.facebook.com/twofoldmusic</string>
 		<key>Facebook_ID</key>
-		<string>440135286077649</string>
+		<integer>440135286077649</integer>
 		<key>Twitter</key>
 		<string>twofoldmusic</string>
 		<key>Soundcloud</key>

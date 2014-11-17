@@ -15,7 +15,6 @@
 		8B805B4619FB33CC0009A7A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B805B4419FB33CC0009A7A2 /* Main.storyboard */; };
 		8B805B6119FB36230009A7A2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B6019FB36230009A7A2 /* TableViewController.swift */; };
 		8B805B6319FB37960009A7A2 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B6219FB37960009A7A2 /* DetailsViewController.swift */; };
-		8B805B9819FB4AC60009A7A2 /* ArtistData.plist.bak in Resources */ = {isa = PBXBuildFile; fileRef = 8B805B9719FB4AC60009A7A2 /* ArtistData.plist.bak */; };
 		8BB3CD1319FC07C6009930B2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB3CD1219FC07C6009930B2 /* TableViewCell.swift */; };
 		8BB3CD1519FC1152009930B2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB3CD1419FC1151009930B2 /* LaunchScreen.xib */; };
 		8BB3CD1719FC116C009930B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB3CD1619FC116C009930B2 /* Images.xcassets */; };
@@ -32,7 +31,6 @@
 		8B805B4519FB33CC0009A7A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B805B6019FB36230009A7A2 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8B805B6219FB37960009A7A2 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		8B805B9719FB4AC60009A7A2 /* ArtistData.plist.bak */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ArtistData.plist.bak; sourceTree = "<group>"; };
 		8BB3CD1219FC07C6009930B2 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8BB3CD1419FC1151009930B2 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		8BB3CD1619FC116C009930B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -87,8 +85,8 @@
 		8B805B3D19FB33CC0009A7A2 /* Phase Management */ = {
 			isa = PBXGroup;
 			children = (
-				27C216F01A15C3EE00374FFB /* Collection View */,
 				27C216EF1A15C3E700374FFB /* Table View */,
+				27C216F01A15C3EE00374FFB /* Collection View */,
 				8B805B6219FB37960009A7A2 /* DetailsViewController.swift */,
 				8B805B4419FB33CC0009A7A2 /* Main.storyboard */,
 				8B805B3E19FB33CC0009A7A2 /* Supporting Files */,
@@ -101,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				8B805B4019FB33CC0009A7A2 /* AppDelegate.swift */,
-				8B805B9719FB4AC60009A7A2 /* ArtistData.plist.bak */,
 				8B085E8819FDF7DB00A2FDFA /* ArtistData.plist */,
 				8B805B3F19FB33CC0009A7A2 /* Info.plist */,
 				8BB3CD1419FC1151009930B2 /* LaunchScreen.xib */,
@@ -172,7 +169,6 @@
 				8BB3CD1519FC1152009930B2 /* LaunchScreen.xib in Resources */,
 				8BB3CD1719FC116C009930B2 /* Images.xcassets in Resources */,
 				8B805B4619FB33CC0009A7A2 /* Main.storyboard in Resources */,
-				8B805B9819FB4AC60009A7A2 /* ArtistData.plist.bak in Resources */,
 				8B085E8B19FDFC3F00A2FDFA /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
