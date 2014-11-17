@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		278DCEF31A19D42800CDBF26 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 278DCEF11A19D42800CDBF26 /* Crashlytics.framework */; };
+		278DCEF41A19D42800CDBF26 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 278DCEF21A19D42800CDBF26 /* Fabric.framework */; };
 		27C216EE1A15C37500374FFB /* ArtistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C216ED1A15C37500374FFB /* ArtistCollectionViewCell.swift */; };
 		27C216F21A15C40800374FFB /* ArtistsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C216F11A15C40800374FFB /* ArtistsCollectionViewController.swift */; };
 		8B085E8919FDF7DB00A2FDFA /* ArtistData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B085E8819FDF7DB00A2FDFA /* ArtistData.plist */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		278DCEF11A19D42800CDBF26 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
+		278DCEF21A19D42800CDBF26 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		27C216ED1A15C37500374FFB /* ArtistCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistCollectionViewCell.swift; sourceTree = "<group>"; };
 		27C216F11A15C40800374FFB /* ArtistsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsCollectionViewController.swift; sourceTree = "<group>"; };
 		8B085E8819FDF7DB00A2FDFA /* ArtistData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ArtistData.plist; sourceTree = "<group>"; };
@@ -39,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				278DCEF31A19D42800CDBF26 /* Crashlytics.framework in Frameworks */,
+				278DCEF41A19D42800CDBF26 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +101,8 @@
 		8B805B3E19FB33CC0009A7A2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				278DCEF11A19D42800CDBF26 /* Crashlytics.framework */,
+				278DCEF21A19D42800CDBF26 /* Fabric.framework */,
 				8B805B4019FB33CC0009A7A2 /* AppDelegate.swift */,
 				8B085E8819FDF7DB00A2FDFA /* ArtistData.plist */,
 				8B805B3F19FB33CC0009A7A2 /* Info.plist */,
@@ -114,6 +122,7 @@
 				8B805B3719FB33CC0009A7A2 /* Sources */,
 				8B805B3819FB33CC0009A7A2 /* Frameworks */,
 				8B805B3919FB33CC0009A7A2 /* Resources */,
+				278DCEF01A19D40E00CDBF26 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -170,6 +179,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		278DCEF01A19D40E00CDBF26 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 6ae3f7d8c056a4123d50b0b67a1b2466fa33455e 6e45bddaa6461a2931397d84b2abee0b81a29069ee760bbbf66de338435be692";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8B805B3719FB33CC0009A7A2 /* Sources */ = {
@@ -281,6 +307,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/ArtistsView/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -293,6 +323,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/ArtistsView/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
