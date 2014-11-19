@@ -141,14 +141,14 @@
                                 <exclude reference="Bbs-nw-pWv"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="4K0-bz-la7"/>
+                                <exclude reference="YDf-I6-lFm"/>
+                                <exclude reference="dBH-ih-Fck"/>
+                                <exclude reference="dqW-5U-luQ"/>
                                 <exclude reference="QEg-Bw-4Gk"/>
                                 <exclude reference="cH5-8h-DtP"/>
                                 <exclude reference="hkj-U9-uNx"/>
                                 <exclude reference="ymD-gp-QAD"/>
-                                <exclude reference="YDf-I6-lFm"/>
-                                <exclude reference="dBH-ih-Fck"/>
-                                <exclude reference="dqW-5U-luQ"/>
-                                <exclude reference="4K0-bz-la7"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -167,10 +167,10 @@
                                 <include reference="Bbs-nw-pWv"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="4K0-bz-la7"/>
                                 <include reference="YDf-I6-lFm"/>
                                 <include reference="dBH-ih-Fck"/>
                                 <include reference="dqW-5U-luQ"/>
-                                <include reference="4K0-bz-la7"/>
                             </mask>
                         </variation>
                     </view>
@@ -260,7 +260,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="v0v-P6-duY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="10" id="VbQ-Bg-edC">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="7" id="VbQ-Bg-edC">
                             <size key="itemSize" width="400" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -306,20 +306,20 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="2go-Ci-bJI" secondAttribute="trailing" id="1TH-zi-MVd"/>
                                     <constraint firstItem="Ipg-JV-LsK" firstAttribute="bottom" secondItem="qbm-4w-2jr" secondAttribute="bottomMargin" id="ElL-4b-Lq7"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="2go-Ci-bJI" secondAttribute="bottom" constant="-58" id="FZl-Lb-0Qv"/>
+                                    <constraint firstAttribute="trailing" secondItem="2go-Ci-bJI" secondAttribute="trailing" id="GLG-mp-PoK"/>
                                     <constraint firstItem="Ipg-JV-LsK" firstAttribute="leading" secondItem="qbm-4w-2jr" secondAttribute="leadingMargin" id="Hqi-A3-mes"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="Ipg-JV-LsK" secondAttribute="trailing" constant="10" id="SYz-NB-9vr"/>
-                                    <constraint firstItem="2go-Ci-bJI" firstAttribute="top" secondItem="qbm-4w-2jr" secondAttribute="top" id="X84-lH-st8"/>
-                                    <constraint firstItem="2go-Ci-bJI" firstAttribute="leading" secondItem="qbm-4w-2jr" secondAttribute="leading" id="cfY-9I-OE7"/>
+                                    <constraint firstItem="2go-Ci-bJI" firstAttribute="leading" secondItem="qbm-4w-2jr" secondAttribute="leading" id="ZRA-d4-WY0"/>
+                                    <constraint firstItem="2go-Ci-bJI" firstAttribute="top" secondItem="qbm-4w-2jr" secondAttribute="top" id="g5d-bP-2wA"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="2go-Ci-bJI" secondAttribute="bottom" constant="-58" id="vqn-8X-pxW"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="1TH-zi-MVd"/>
-                                        <exclude reference="FZl-Lb-0Qv"/>
-                                        <exclude reference="X84-lH-st8"/>
-                                        <exclude reference="cfY-9I-OE7"/>
+                                        <exclude reference="GLG-mp-PoK"/>
+                                        <exclude reference="ZRA-d4-WY0"/>
+                                        <exclude reference="g5d-bP-2wA"/>
+                                        <exclude reference="vqn-8X-pxW"/>
                                         <exclude reference="ElL-4b-Lq7"/>
                                         <exclude reference="Hqi-A3-mes"/>
                                         <exclude reference="SYz-NB-9vr"/>
@@ -327,10 +327,10 @@
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="1TH-zi-MVd"/>
-                                        <include reference="FZl-Lb-0Qv"/>
-                                        <include reference="X84-lH-st8"/>
-                                        <include reference="cfY-9I-OE7"/>
+                                        <include reference="GLG-mp-PoK"/>
+                                        <include reference="ZRA-d4-WY0"/>
+                                        <include reference="g5d-bP-2wA"/>
+                                        <include reference="vqn-8X-pxW"/>
                                         <include reference="ElL-4b-Lq7"/>
                                         <include reference="Hqi-A3-mes"/>
                                         <include reference="SYz-NB-9vr"/>

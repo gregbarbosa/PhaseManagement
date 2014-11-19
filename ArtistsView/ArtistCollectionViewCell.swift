@@ -9,7 +9,7 @@
 
 import UIKit
 
-let imageHeight: CGFloat = 200.0
+let imageHeight: CGFloat = 150.0
 let offsetSpeed: CGFloat = 15.0
 
 class ArtistCollectionViewCell: UICollectionViewCell {

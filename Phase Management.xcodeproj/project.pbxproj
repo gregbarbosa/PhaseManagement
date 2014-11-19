@@ -14,9 +14,7 @@
 		8B085E8919FDF7DB00A2FDFA /* ArtistData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B085E8819FDF7DB00A2FDFA /* ArtistData.plist */; };
 		8B805B4119FB33CC0009A7A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B4019FB33CC0009A7A2 /* AppDelegate.swift */; };
 		8B805B4619FB33CC0009A7A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B805B4419FB33CC0009A7A2 /* Main.storyboard */; };
-		8B805B6119FB36230009A7A2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B6019FB36230009A7A2 /* TableViewController.swift */; };
 		8B805B6319FB37960009A7A2 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B805B6219FB37960009A7A2 /* DetailsViewController.swift */; };
-		8BB3CD1319FC07C6009930B2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB3CD1219FC07C6009930B2 /* TableViewCell.swift */; };
 		8BB3CD1519FC1152009930B2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB3CD1419FC1151009930B2 /* LaunchScreen.xib */; };
 		8BB3CD1719FC116C009930B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB3CD1619FC116C009930B2 /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -31,9 +29,7 @@
 		8B805B3F19FB33CC0009A7A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B805B4019FB33CC0009A7A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B805B4519FB33CC0009A7A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8B805B6019FB36230009A7A2 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		8B805B6219FB37960009A7A2 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		8BB3CD1219FC07C6009930B2 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		8BB3CD1419FC1151009930B2 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		8BB3CD1619FC116C009930B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,24 +47,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		27C216EF1A15C3E700374FFB /* Table View */ = {
-			isa = PBXGroup;
-			children = (
-				8BB3CD1219FC07C6009930B2 /* TableViewCell.swift */,
-				8B805B6019FB36230009A7A2 /* TableViewController.swift */,
-			);
-			name = "Table View";
-			sourceTree = "<group>";
-		};
-		27C216F01A15C3EE00374FFB /* Collection View */ = {
-			isa = PBXGroup;
-			children = (
-				27C216ED1A15C37500374FFB /* ArtistCollectionViewCell.swift */,
-				27C216F11A15C40800374FFB /* ArtistsCollectionViewController.swift */,
-			);
-			name = "Collection View";
-			sourceTree = "<group>";
-		};
 		8B805B3219FB33CC0009A7A2 = {
 			isa = PBXGroup;
 			children = (
@@ -88,8 +66,8 @@
 		8B805B3D19FB33CC0009A7A2 /* Phase Management */ = {
 			isa = PBXGroup;
 			children = (
-				27C216EF1A15C3E700374FFB /* Table View */,
-				27C216F01A15C3EE00374FFB /* Collection View */,
+				27C216ED1A15C37500374FFB /* ArtistCollectionViewCell.swift */,
+				27C216F11A15C40800374FFB /* ArtistsCollectionViewController.swift */,
 				8B805B6219FB37960009A7A2 /* DetailsViewController.swift */,
 				8B805B4419FB33CC0009A7A2 /* Main.storyboard */,
 				8B805B3E19FB33CC0009A7A2 /* Supporting Files */,
@@ -204,8 +182,6 @@
 			files = (
 				8B805B4119FB33CC0009A7A2 /* AppDelegate.swift in Sources */,
 				27C216F21A15C40800374FFB /* ArtistsCollectionViewController.swift in Sources */,
-				8BB3CD1319FC07C6009930B2 /* TableViewCell.swift in Sources */,
-				8B805B6119FB36230009A7A2 /* TableViewController.swift in Sources */,
 				27C216EE1A15C37500374FFB /* ArtistCollectionViewCell.swift in Sources */,
 				8B805B6319FB37960009A7A2 /* DetailsViewController.swift in Sources */,
 			);

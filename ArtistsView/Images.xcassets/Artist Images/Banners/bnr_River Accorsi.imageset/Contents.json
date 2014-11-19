@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "bnr_RiverAccorsi.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "bnr_RiverAccorsi@2x.png"
+      "filename" : "bnr_River Accorsi@2x.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "bnr_River Accorsi@3x.png"
     }
   ],
   "info" : {

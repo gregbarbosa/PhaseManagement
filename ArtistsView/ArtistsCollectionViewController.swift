@@ -66,6 +66,7 @@ class ArtistsCollectionViewController: UICollectionViewController {
         // Configure cell
         artistCell.artistNameLabel.text = artist
         artistCell.image = UIImage(named: "bnr_\(artist)")!
+//        artistCell.image = UIImage(named: "\(artist)")!
         return artistCell
     }
 
