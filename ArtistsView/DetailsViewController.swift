@@ -101,40 +101,68 @@ class DetailsViewController: UIViewController, UIActionSheetDelegate, MFMailComp
 
     // MARK: Artist Contact and Sharing
     @IBAction func mail(sender: AnyObject) {
-//        if (artistsBooking == artistsManagement) {
-//            println("Booking and Management are the same. \(artistsManagement)")
-//        }
+        
+        if(MFMailComposeViewController.canSendMail()) {
 
-        // Mail Action Sheet
-        let alertController = UIAlertController(title: "Mail", message: "What are you looking for?", preferredStyle: .ActionSheet)
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
-            // ...
-        }
-        alertController.addAction(cancelAction)
-        
-        let bookingOption = UIAlertAction(title: "Booking", style: .Default) { (action) in
-            println("Booking")
-            // ...
-        }
-        alertController.addAction(bookingOption)
-        
-        let mgmtOption = UIAlertAction(title: "Management", style: .Default) { (action) in
-            println("Management")
-            // ...
-        }
-        alertController.addAction(mgmtOption)
-        
-        self.presentViewController(alertController, animated: true) {
-            // ...
+            let artistContact: MFMailComposeViewController = MFMailComposeViewController()
+            artistContact.mailComposeDelegate = self
+            println("Device is able to send email!")
+
+            //        if (artistsBooking == artistsManagement) {
+            //            println("Booking and Management are the same. \(artistsManagement)")
+            //        }
+
+            // Mail Action Sheet
+            let alertController = UIAlertController(title: "Mail", message: "What are you looking for?", preferredStyle: .ActionSheet)
+
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+                // ...
+            }
+            alertController.addAction(cancelAction)
+
+            let bookingOption = UIAlertAction(title: "Booking", style: .Default) { (action) in
+                artistContact.setSubject("Looking to book \(self.artistName)!")
+                artistContact.setMessageBody("Hey, I was looking through the Phase Management app, and I'm looking to get information on booking \(self.artistName).", isHTML: true)
+                artistContact.setToRecipients([self.artistsBooking])
+
+                self.presentViewController(artistContact, animated: true, completion: nil)
+            }
+            alertController.addAction(bookingOption)
+
+            let mgmtOption = UIAlertAction(title: "Management", style: .Default) { (action) in
+                println("Management")
+                artistContact.setSubject("Looking for \(self.artistName)'s management")
+                artistContact.setMessageBody("Hey, I was looking through the Phase Management app, and I'm looking to talk to \(self.artistName)'s management about...", isHTML: true)
+                artistContact.setToRecipients([self.artistsManagement])
+
+                self.presentViewController(artistContact, animated: true, completion: nil)
+            }
+            alertController.addAction(mgmtOption)
+
+            self.presentViewController(alertController, animated: true) {
+                // ...
+            }
+            
+        } else if (!MFMailComposeViewController.canSendMail()) {
+            println("Device cannot send emails")
+
+            var alert = UIAlertController(title: "Alert", message: "Your device cannot send emails", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+
         }
         
     }
+
+    // FIXME: Finish implementing compose result
+//    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+//
+//    }
+
     @IBAction func share(sender: AnyObject) {
         println("Share Sheet")
     }
 
-    
     // MARK: - Navigation
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 //    }
