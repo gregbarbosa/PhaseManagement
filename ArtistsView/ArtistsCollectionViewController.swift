@@ -80,7 +80,7 @@ class ArtistsCollectionViewController: UICollectionViewController {
         }
     }
 
-    // MARK: - Navigation
+    // MARK: Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "artistDetails" {
             let cell = sender as UICollectionViewCell
@@ -107,4 +107,5 @@ class ArtistsCollectionViewController: UICollectionViewController {
             }
         }
     }
+    
 }

@@ -31,11 +31,13 @@ class DetailsViewController: UIViewController, UIActionSheetDelegate, MFMailComp
         artistBioTextView.text = artistBio
         artistImageView.image = UIImage(named: "\(artistName)")
         artistImageView.clipsToBounds = true
+
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureView()
+
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -57,15 +59,6 @@ class DetailsViewController: UIViewController, UIActionSheetDelegate, MFMailComp
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
-    }
-
-    // View Labels
-    @IBAction func showArtistBiography(sender: AnyObject) {
-        if(artistBioTextView.hidden) {
-            artistBioTextView.hidden = false
-        } else {
-            artistBioTextView.hidden = true
-        }
     }
 
     // MARK: Artist's Social Links
@@ -153,7 +146,7 @@ class DetailsViewController: UIViewController, UIActionSheetDelegate, MFMailComp
         
     }
 
-    // FIXME: Finish implementing compose result
+    // MARK: Mail
     func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
         var alertMessage: String = String()
 
@@ -190,6 +183,28 @@ class DetailsViewController: UIViewController, UIActionSheetDelegate, MFMailComp
 
     @IBAction func share(sender: AnyObject) {
         println("Share Sheet")
+    }
+
+    // FIXME: Biography Live Blur
+    @IBAction func showArtistBiography(sender: AnyObject) {
+        if(artistBioTextView.hidden) {
+            updateBlur()
+//            artistBioTextView.hidden = false
+        } else {
+            artistBioTextView.hidden = true
+        }
+    }
+
+    func updateBlur() {
+        // Blurring
+        var blur = UIBlurEffect (style: .Dark)
+        var blurView = UIVisualEffectView (effect: blur)
+
+        blurView.frame = self.view.bounds
+        //            self.view.insertSubview(blurView, atIndex: 4)
+        self.view.addSubview(blurView)
+        self.view.addSubview(artistBioTextView)
+        artistBioTextView.hidden = false
     }
 
     // MARK: - Navigation
