@@ -101,7 +101,7 @@ class DetailsViewController: UIViewController, UIActionSheetDelegate, MFMailComp
 
     // MARK: Artist Contact and Sharing
     @IBAction func mail(sender: AnyObject) {
-        
+
         if(MFMailComposeViewController.canSendMail()) {
 
             let artistContact: MFMailComposeViewController = MFMailComposeViewController()
@@ -155,9 +155,9 @@ class DetailsViewController: UIViewController, UIActionSheetDelegate, MFMailComp
     }
 
     // FIXME: Finish implementing compose result
-//    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
-//
-//    }
+    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     @IBAction func share(sender: AnyObject) {
         println("Share Sheet")
