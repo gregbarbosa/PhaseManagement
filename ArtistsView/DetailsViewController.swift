@@ -144,7 +144,6 @@ class DetailsViewController: UIViewController, UIActionSheetDelegate, MFMailComp
             }
             
         } else if (!MFMailComposeViewController.canSendMail()) {
-            println("Device cannot send emails")
 
             var alert = UIAlertController(title: "Alert", message: "Your device cannot send emails", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
@@ -156,7 +155,37 @@ class DetailsViewController: UIViewController, UIActionSheetDelegate, MFMailComp
 
     // FIXME: Finish implementing compose result
     func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        var alertMessage: String = String()
+
+        switch(result.value) {
+        case MFMailComposeResultCancelled.value:
+            self.dismissViewControllerAnimated(true, completion: nil)
+
+        case MFMailComposeResultFailed.value:
+            alertMessage = "Message send failed. \(error)"
+            self.dismissViewControllerAnimated(true, completion: nil)
+
+        case MFMailComposeResultSaved.value:
+            self.dismissViewControllerAnimated(true, completion: nil)
+
+        case MFMailComposeResultSent.value:
+            alertMessage = "Message sent successfully!"
+            self.dismissViewControllerAnimated(true, completion: nil)
+
+        default:
+            alertMessage = "Your message was not sent."
+        }
+
+        if (!alertMessage.isEmpty){
+            var alert = UIAlertController(title: nil, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        } else {
+            //Do nothing
+        }
+
+
     }
 
     @IBAction func share(sender: AnyObject) {
