@@ -189,7 +189,7 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="6iR-ed-kuJ"/>
-                        <barButtonItem image="btn_music" style="plain" id="lrb-UJ-bPa">
+                        <barButtonItem image="btn_soundcloud" style="plain" id="lrb-UJ-bPa">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="soundcloud:" destination="Uoz-Y1-fnN" id="Rj7-US-VVq"/>
@@ -386,8 +386,8 @@
         <image name="btn_bio" width="22" height="14"/>
         <image name="btn_facebook" width="11" height="22"/>
         <image name="btn_mail" width="22" height="16"/>
-        <image name="btn_music" width="22" height="22"/>
         <image name="btn_share" width="16" height="22"/>
+        <image name="btn_soundcloud" width="44" height="20"/>
         <image name="btn_twitter" width="22" height="18"/>
     </resources>
 </document>
