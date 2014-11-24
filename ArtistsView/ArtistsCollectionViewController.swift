@@ -72,10 +72,13 @@ class ArtistsCollectionViewController: UICollectionViewController {
 
     // MARK: Parallax Effect on UICollectionViewCells
     override func scrollViewDidScroll(scrollView: UIScrollView) {
-        if let visibleCells = collectionView.visibleCells() as? [ArtistCollectionViewCell] {
+        if let visibleCells = collectionView?.visibleCells() as? [ArtistCollectionViewCell] {
             for artistCell in visibleCells {
-                var yOffset = ((collectionView.contentOffset.y - artistCell.frame.origin.y) / imageHeight) * offsetSpeed
-                artistCell.offset(CGPointMake(0.0, yOffset))
+                // FIXME: Refactor
+                if var collectionViewOffset = (collectionView?.contentOffset.y) {
+                    var yOffset = ((collectionViewOffset - artistCell.frame.origin.y) / imageHeight) * offsetSpeed
+                    artistCell.offset(CGPointMake(0.0, yOffset))
+                }
             }
         }
     }
@@ -83,8 +86,8 @@ class ArtistsCollectionViewController: UICollectionViewController {
     // MARK: Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "artistDetails" {
-            let cell = sender as UICollectionViewCell
-            if let indexPath = self.collectionView.indexPathForCell(cell) {
+            let cell = sender as UICollectionViewCell!
+            if let indexPath = collectionView?.indexPathForCell(cell) {
                 var dict = artists.objectAtIndex(indexPath.row) as NSDictionary
                 let artist = dict.objectForKey("Artist") as String
                 let artistBio = dict.objectForKey("Bio") as String
