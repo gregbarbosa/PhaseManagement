@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5mn-By-C3p">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -32,13 +31,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YTP-8m-r5C" firstAttribute="top" secondItem="Bbs-nw-pWv" secondAttribute="bottom" constant="8" symbolic="YES" id="4K0-bz-la7"/>
+                            <constraint firstItem="Bbs-nw-pWv" firstAttribute="leading" secondItem="4ad-Vk-Iaf" secondAttribute="leadingMargin" id="02z-xE-fIC"/>
+                            <constraint firstAttribute="trailing" secondItem="HVh-un-Vpr" secondAttribute="trailing" id="1IP-5q-8jE"/>
+                            <constraint firstItem="Bbs-nw-pWv" firstAttribute="top" secondItem="0n2-lb-JVJ" secondAttribute="bottom" constant="118" id="DeM-0F-Y6G"/>
+                            <constraint firstItem="HVh-un-Vpr" firstAttribute="leading" secondItem="4ad-Vk-Iaf" secondAttribute="leading" id="Lek-AP-oa1"/>
                             <constraint firstItem="HVh-un-Vpr" firstAttribute="leading" secondItem="4ad-Vk-Iaf" secondAttribute="leading" id="QEg-Bw-4Gk"/>
-                            <constraint firstItem="Bbs-nw-pWv" firstAttribute="centerX" secondItem="HVh-un-Vpr" secondAttribute="centerX" id="YDf-I6-lFm"/>
+                            <constraint firstItem="HVh-un-Vpr" firstAttribute="top" secondItem="4ad-Vk-Iaf" secondAttribute="top" id="aXV-Iw-TiO"/>
+                            <constraint firstItem="YTP-8m-r5C" firstAttribute="top" secondItem="Bbs-nw-pWv" secondAttribute="bottom" constant="224" id="bWi-z5-W2c"/>
                             <constraint firstAttribute="bottom" secondItem="HVh-un-Vpr" secondAttribute="bottom" id="cH5-8h-DtP"/>
-                            <constraint firstItem="Bbs-nw-pWv" firstAttribute="top" secondItem="0n2-lb-JVJ" secondAttribute="bottom" constant="8" symbolic="YES" id="dBH-ih-Fck"/>
-                            <constraint firstItem="Bbs-nw-pWv" firstAttribute="leading" secondItem="4ad-Vk-Iaf" secondAttribute="leadingMargin" id="dqW-5U-luQ"/>
+                            <constraint firstAttribute="bottom" secondItem="HVh-un-Vpr" secondAttribute="bottom" id="hOg-zF-Lfa"/>
                             <constraint firstItem="HVh-un-Vpr" firstAttribute="top" secondItem="4ad-Vk-Iaf" secondAttribute="top" id="hkj-U9-uNx"/>
+                            <constraint firstItem="HVh-un-Vpr" firstAttribute="centerX" secondItem="Bbs-nw-pWv" secondAttribute="centerX" id="uni-a2-n1M"/>
                             <constraint firstAttribute="trailing" secondItem="HVh-un-Vpr" secondAttribute="trailing" id="ymD-gp-QAD"/>
                         </constraints>
                         <variation key="default">
@@ -47,14 +50,18 @@
                                 <exclude reference="Bbs-nw-pWv"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="4K0-bz-la7"/>
-                                <exclude reference="YDf-I6-lFm"/>
-                                <exclude reference="dBH-ih-Fck"/>
-                                <exclude reference="dqW-5U-luQ"/>
+                                <exclude reference="1IP-5q-8jE"/>
+                                <exclude reference="Lek-AP-oa1"/>
                                 <exclude reference="QEg-Bw-4Gk"/>
+                                <exclude reference="aXV-Iw-TiO"/>
                                 <exclude reference="cH5-8h-DtP"/>
+                                <exclude reference="hOg-zF-Lfa"/>
                                 <exclude reference="hkj-U9-uNx"/>
+                                <exclude reference="uni-a2-n1M"/>
                                 <exclude reference="ymD-gp-QAD"/>
+                                <exclude reference="02z-xE-fIC"/>
+                                <exclude reference="DeM-0F-Y6G"/>
+                                <exclude reference="bWi-z5-W2c"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -73,10 +80,18 @@
                                 <include reference="Bbs-nw-pWv"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="4K0-bz-la7"/>
-                                <include reference="YDf-I6-lFm"/>
-                                <include reference="dBH-ih-Fck"/>
-                                <include reference="dqW-5U-luQ"/>
+                                <include reference="1IP-5q-8jE"/>
+                                <include reference="Lek-AP-oa1"/>
+                                <exclude reference="QEg-Bw-4Gk"/>
+                                <include reference="aXV-Iw-TiO"/>
+                                <exclude reference="cH5-8h-DtP"/>
+                                <include reference="hOg-zF-Lfa"/>
+                                <exclude reference="hkj-U9-uNx"/>
+                                <include reference="uni-a2-n1M"/>
+                                <exclude reference="ymD-gp-QAD"/>
+                                <include reference="02z-xE-fIC"/>
+                                <include reference="DeM-0F-Y6G"/>
+                                <include reference="bWi-z5-W2c"/>
                             </mask>
                         </variation>
                     </view>
@@ -109,21 +124,14 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="FeC-9W-iRu"/>
-                        <barButtonItem image="btn_share" style="plain" id="x2u-Ow-qLY">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="share:" destination="Uoz-Y1-fnN" id="qDN-6t-Jtx"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="Details" id="3yH-ak-pgO">
-                        <barButtonItem key="rightBarButtonItem" image="btn_bio" id="FZt-yt-Jas">
+                        <barButtonItem image="btn_bio" id="FZt-yt-Jas">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="showArtistBiography:" destination="Uoz-Y1-fnN" id="9HW-iF-zzq"/>
                             </connections>
                         </barButtonItem>
-                    </navigationItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Details" id="3yH-ak-pgO"/>
                     <connections>
                         <outlet property="artistBioTextView" destination="Bbs-nw-pWv" id="Mpv-8P-Qfu"/>
                         <outlet property="artistImageView" destination="HVh-un-Vpr" id="FtT-HQ-Lwv"/>
@@ -266,7 +274,6 @@
         <image name="btn_bio" width="22" height="14"/>
         <image name="btn_facebook" width="11" height="22"/>
         <image name="btn_mail" width="22" height="16"/>
-        <image name="btn_share" width="16" height="22"/>
         <image name="btn_soundcloud" width="44" height="20"/>
         <image name="btn_twitter" width="22" height="18"/>
     </resources>

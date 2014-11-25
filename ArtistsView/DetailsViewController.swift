@@ -203,7 +203,7 @@ class DetailsViewController: UIViewController, UIActionSheetDelegate, MFMailComp
         blurView.frame = self.view.bounds
         //            self.view.insertSubview(blurView, atIndex: 4)
         self.view.addSubview(blurView)
-        self.view.addSubview(artistBioTextView)
+        blurView.contentView.addSubview(artistBioTextView)
         artistBioTextView.hidden = false
     }
 
